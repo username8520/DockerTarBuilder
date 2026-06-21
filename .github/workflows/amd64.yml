@@ -14,11 +14,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Clean up Docker to free space
       run: |
-          using: 'node24'
           docker system prune -a -f
           docker volume prune -f
 
