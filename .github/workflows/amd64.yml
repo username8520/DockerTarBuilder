@@ -11,6 +11,9 @@ on:
 jobs:
   pull_and_package:
     runs-on: ubuntu-22.04
+    env:
+    # 强制所有内置JS Action使用Node24运行
+     FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
     - name: Checkout repository
